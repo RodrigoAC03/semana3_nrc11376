@@ -31,6 +31,7 @@ public class V1 extends JFrame implements ActionListener {
 	private JTextArea txtS;
 	private JButton btnNewButton;
 	private JButton btnNewButton_3;
+	private JButton btnNewButton_4;
 
 	/**
 	 * Launch the application.
@@ -125,8 +126,17 @@ public class V1 extends JFrame implements ActionListener {
 			btnNewButton_3.setBounds(285, 97, 85, 21);
 			contentPane.add(btnNewButton_3);
 		}
+		{
+			btnNewButton_4 = new JButton("Borrar");
+			btnNewButton_4.addActionListener(this);
+			btnNewButton_4.setBounds(10, 101, 89, 23);
+			contentPane.add(btnNewButton_4);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton_4) {
+			do_btnNewButton_4_actionPerformed(e);
+		}
 		if (e.getSource() == btnNewButton_3) {
 			do_btnNewButton_3_actionPerformed(e);
 		}
@@ -214,5 +224,7 @@ public class V1 extends JFrame implements ActionListener {
 		txtN3.setText(" ");
 		txtN1.grabFocus();
 		
+	}
+	protected void do_btnNewButton_4_actionPerformed(ActionEvent e) {
 	}
 }
